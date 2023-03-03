@@ -9,8 +9,6 @@ body {
     background-color: #b09367;
 }
 
-
-
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -23,7 +21,6 @@ body {
     display: flex;
     flex-flow: row wrap;
     margin: 50px auto;
-
     width: calc(70px * 10);
 
 }
@@ -32,18 +29,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 70px;
     height: 70px;
-
-    cursor: pointer;
     border: 1px solid black;
 }
 
 .light-blue {
     background-color: #38b9e0;
 }
-
 
 .choose-menu {
     display: flex;
@@ -54,6 +47,7 @@ body {
 select, button {
     border-radius: 20px;
     padding: 5px 10px;
+    cursor: pointer;
     background-color: #b09367;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
