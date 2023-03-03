@@ -9,34 +9,77 @@ della cella cliccata.
 */
 
 
+// inizializzo il contenitore degli square e il bottone che lo andrà a generare
 let gridContainerEl = document.getElementById("grid-container");
+let playButtonEl = document.getElementById("play-button");
 
-let playButtonEl = document.getElementById("play-button")
 
-let cellNumber = 100;
-
+// aggiungo funzione al click del bottone che genera la grigli in base al livello di difficoltà scelto
 playButtonEl.addEventListener("click", function() {
+    // inizializzo il controllo della difficoltà all'interno della funzione CLICK così da non stamparla immediatamente al lancio del programma
+    let chooseDifficultInputEl = document.getElementById("choose-difficult").value;
+    // inizializzo un contatore vuoto
+    let cellNumber;
 
-    for (let i = 0; i < cellNumber; i++) {
-    
-        let newSquareEl = createSquare(i + 1);
+    // difficoltà facile
+    if (chooseDifficultInputEl === "0") {
 
-        // appendiamolo al genitore
-        gridContainerEl.append(newSquareEl);
+        // in facile gli square devono essere 100
+        cellNumber = 100;
+
+        // funzione bella
+        howManySquare(cellNumber);
+
+    // difficoltà normale
+    } else if (chooseDifficultInputEl === "1") {
+
+        gridContainerEl.style.width = "calc(70px * 9)";
+
+        // in normale gli square devono essere 81
+        cellNumber = 81;
+
+        // funzione bella
+        howManySquare(cellNumber);
+
+    // difficoltà difficile
+    } else if (chooseDifficultInputEl === "2") {
+
+        gridContainerEl.style.width = "calc(70px * 7)";
+
+        // in difficile gli square devono essere 49
+        cellNumber = 49;
+
+        // funzione bella
+        howManySquare(cellNumber);
+
     }
-
 
 })
 
 
 
 
+// FUNCTION //
+
+// funzione per capire quanti square generare in base alla difficoltà, e come dividere le righe.
+function howManySquare(cellNumber) {
+
+    for (let i = 0; i < cellNumber; i++) {
+    
+        let newSquareEl = createSquare(i + 1);
 
 
+        newSquareEl.addEventListener("click", function() {
 
+            newSquareEl.classList.toggle("light-blue");
+            console.log(i);
+        })
 
+        // appendiamolo al genitore
+        gridContainerEl.append(newSquareEl);
+    }
 
-
+}
 
 
 // funzione che genera un elemento, gli assegna una classe "square"
@@ -52,3 +95,5 @@ function createSquare(text) {
     return newEl;
 
 }
+
+// /FUNCTION //
