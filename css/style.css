@@ -6,4 +6,38 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #b09367;
+}
+
+
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #f4e1a9;
+}
+
+#grid-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 50px auto;
+
+    width: calc(70px * 10);
+
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 70px;
+
+    border: 1px solid black;
+}
+
+.light-blue {
+    background-color: #38b9e0;
 }
