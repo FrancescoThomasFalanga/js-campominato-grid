@@ -12,6 +12,7 @@ della cella cliccata.
 // inizializzo il contenitore degli square e il bottone che lo andrà a generare
 let gridContainerEl = document.getElementById("grid-container");
 let playButtonEl = document.getElementById("play-button");
+let clearButtonEl = document.getElementById("clear-button");
 
 
 // aggiungo funzione al click del bottone che genera la grigli in base al livello di difficoltà scelto
@@ -54,7 +55,13 @@ playButtonEl.addEventListener("click", function() {
 
     }
 
-})
+});
+
+clearButtonEl.addEventListener("click", function() {
+
+    gridContainerEl.innerHTML = "";
+
+});
 
 
 
