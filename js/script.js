@@ -17,7 +17,7 @@ let clearButtonEl = document.getElementById("clear-button");
 
 // aggiungo funzione al click del bottone che genera la grigli in base al livello di difficoltà scelto
 playButtonEl.addEventListener("click", function() {
-    
+
     // inizializzo il controllo della difficoltà all'interno della funzione CLICK così da non stamparla immediatamente al lancio del programma
     let chooseDifficultInputEl = document.getElementById("choose-difficult").value;
     // inizializzo un contatore vuoto
@@ -89,7 +89,7 @@ function howManySquare(cellNumber) {
         newSquareEl.addEventListener("click", function() {
 
             newSquareEl.classList.toggle("light-blue");
-            console.log(i);
+            console.log(i + 1);
         })
 
         // appendiamolo al genitore
