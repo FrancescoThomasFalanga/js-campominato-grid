@@ -26,6 +26,8 @@ playButtonEl.addEventListener("click", function() {
     // difficoltà facile
     if (chooseDifficultInputEl === "0") {
 
+        gridContainerEl.style.width = "calc(70px * 10)";
+
         // in facile gli square devono essere 100
         cellNumber = 100;
 
